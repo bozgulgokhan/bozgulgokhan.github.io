@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müzik Sayfası</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #1a1a1a, #4a4a4a);
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .music-player {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        audio {
+            width: 300px;
+            height: 40px;
+            outline: none;
+        }
+
+        .glow {
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073;
+            }
+            to {
+                box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="music-player glow">
+        <img src="./efe.PNG" alt="Profil Resmi" class="profile-image">
+        <h1 class="title">♪ Efe Trap ♪</h1>
+        <div class="controls">
+            <audio controls autoplay preload="auto" onloadeddata="console.log('Ses dosyası yüklendi')" onerror="console.log('Ses dosyası yüklenemedi')">
+                <source src="whatsappses.mp3" type="audio/mpeg">
+                <source src="./whatsappses.mp3" type="audio/mpeg">
+                <source src="/whatsappses.mp3" type="audio/mpeg">
+                Tarayıcınız audio elementini desteklemiyor.
+            </audio>
+        </div>
+        <p style="margin-top: 20px;">Dinleyene Selamlar Olsun!</p>
+    </div>
+</body>
+</html>
